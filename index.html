@@ -140,6 +140,9 @@
     .sunday-copy>p{font-size:17px;color:var(--ink-soft);margin:0 0 26px}
     .host-note{padding-top:22px;border-top:1px solid var(--line);margin:0 0 30px;color:var(--ink)}
     .host-note strong{display:block;font-size:17px;margin-bottom:3px}.host-note span{color:var(--ink-soft);font-size:14px}
+    .pastor-portrait{margin:0 0 26px;width:min(260px,100%)}
+    .pastor-portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;border-radius:var(--radius-md);box-shadow:var(--shadow)}
+    .pastor-portrait figcaption{margin-top:10px;font-size:13px;font-weight:700;color:var(--ink-soft)}
     .flyer-gallery{background:var(--surface)}
     .gallery-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:24px;align-items:start}
     .gallery-card{margin:0;background:var(--surface-strong);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden}
@@ -175,6 +178,26 @@
     .crossover-panel figure{margin:0;border-radius:50%;overflow:hidden;background:#070817}.crossover-panel img{width:100%;height:auto}
     .crossover-panel h3{font-size:clamp(36px,4.5vw,58px);margin:16px 0 18px}.crossover-panel p{color:#d7e9e6;margin:0 0 18px;max-width:580px}
     .platform-line{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 0}.platform-line span{padding:9px 13px;border:1px solid rgba(255,255,255,.32);border-radius:999px;font-size:13px;font-weight:700}
+    .programs{padding-top:46px}
+    .programs-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+    .program-flyer-card{margin:0;background:var(--surface-strong);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;box-shadow:0 12px 30px rgba(45,36,25,.08);display:flex;flex-direction:column}
+    .program-flyer-card img{width:100%;height:auto}
+    .program-flyer-card figcaption{padding:24px 26px 28px;display:flex;flex-direction:column;gap:8px}
+    .program-when{font-size:12px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:var(--rust)}
+    .program-flyer-card strong{font-family:"Libre Caslon Display",serif;font-size:29px;line-height:1.15;font-weight:400}
+    .program-flyer-card .program-desc{color:var(--ink-soft);font-size:15px}
+    .program-card-time{font-weight:700;font-size:16px;color:var(--ink)}
+    .program-place{align-self:flex-start;margin-top:6px;padding:8px 13px;border:1px solid var(--line);border-radius:999px;font-size:13px;font-weight:700;color:var(--teal)}
+    .program-detail{border-radius:var(--radius-md);padding:42px;display:flex;flex-direction:column;justify-content:center;gap:10px;position:relative;overflow:hidden}
+    .program-detail--sunday{background:var(--teal);color:#fff}
+    .program-detail--sunday:after{content:"";position:absolute;width:240px;height:240px;border:52px solid rgba(255,255,255,.09);border-radius:50%;right:-80px;bottom:-90px;pointer-events:none}
+    .program-detail--crossover{background:var(--teal-deep);color:#fff}
+    .program-detail--crossover:after{content:"";position:absolute;width:240px;height:240px;border:52px solid rgba(255,255,255,.07);border-radius:50%;left:-80px;top:-90px;pointer-events:none}
+    .program-detail .program-when{color:var(--gold)}
+    .program-detail h3{font-size:clamp(32px,3.6vw,44px);position:relative;z-index:1}
+    .program-detail .program-time{font-family:"Libre Caslon Display",serif;font-size:clamp(24px,2.6vw,32px);color:#fff2c5;position:relative;z-index:1}
+    .program-detail p{color:#d9efea;margin:0;max-width:480px;position:relative;z-index:1}
+    .program-detail .program-place{border-color:rgba(255,255,255,.35);color:#fff;position:relative;z-index:1}
     .giving{background:var(--surface)}
     .giving-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(300px,.9fr);gap:64px;align-items:center}
     .giving-copy h2{font-size:clamp(42px,5vw,68px);margin:16px 0 22px}.giving-copy>p{color:var(--ink-soft);font-size:17px;margin:0 0 28px;max-width:590px}
@@ -191,7 +214,7 @@
       nav{position:absolute;left:14px;right:14px;top:78px;background:var(--surface-strong);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius-md);padding:16px;flex-direction:column;align-items:stretch;gap:4px;display:none}
       nav.open{display:flex}nav a{padding:12px 14px}.visit-link{text-align:center;margin-top:6px}
       .hero{padding-top:18px}.hero-card{min-height:680px}.hero-card:after{background:linear-gradient(180deg,rgba(7,42,39,.82),rgba(7,42,39,.68) 65%,rgba(7,42,39,.34))}.hero-copy{width:100%;padding:50px 28px}.hero-copy>p{font-size:16px}.hero-tag{left:18px;right:18px;bottom:18px;max-width:none}
-      section{padding:66px 0}.theme-year{padding:28px 0 66px}.theme-panel{grid-template-columns:1fr;gap:34px;padding:38px 28px}.theme-seal{width:min(100%,420px);margin-inline:auto}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.welcome-grid,.visit-grid,.sunday-grid,.gallery-grid,.declaration-grid,.message-wrap,.crossover-panel,.giving-grid,.cta-box{grid-template-columns:1fr}.visit-grid,.sunday-grid,.declaration-grid,.giving-grid{gap:34px}.gallery-grid{gap:20px}.photo-grid{grid-template-columns:1fr 1fr;gap:18px}.photo-card:nth-child(n){grid-column:span 1}.photo-card:nth-child(1){grid-column:1/-1}.welcome-main,.service-card{padding:30px}.ministry-grid{grid-template-columns:1fr}.ministry{min-height:0;padding:32px 10px}.ministry+.ministry{border-left:0;border-top:1px solid var(--line)}.ministry h3{margin-top:22px}.declaration-art,.crossover-panel figure{width:min(100%,520px);margin-inline:auto}.verse-card{padding:36px;min-height:350px}.message-wrap{gap:36px}.event{grid-template-columns:88px 1fr;gap:18px}.event span:last-child{display:none}.crossover-panel{padding:30px;gap:34px}.cta-box{padding:42px 28px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
+      section{padding:66px 0}.theme-year{padding:28px 0 66px}.theme-panel{grid-template-columns:1fr;gap:34px;padding:38px 28px}.theme-seal{width:min(100%,420px);margin-inline:auto}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.welcome-grid,.visit-grid,.sunday-grid,.gallery-grid,.declaration-grid,.message-wrap,.crossover-panel,.giving-grid,.cta-box{grid-template-columns:1fr}.visit-grid,.sunday-grid,.declaration-grid,.giving-grid{gap:34px}.gallery-grid{gap:20px}.photo-grid{grid-template-columns:1fr 1fr;gap:18px}.photo-card:nth-child(n){grid-column:span 1}.photo-card:nth-child(1){grid-column:1/-1}.welcome-main,.service-card{padding:30px}.ministry-grid{grid-template-columns:1fr}.ministry{min-height:0;padding:32px 10px}.ministry+.ministry{border-left:0;border-top:1px solid var(--line)}.ministry h3{margin-top:22px}.declaration-art,.crossover-panel figure{width:min(100%,520px);margin-inline:auto}.verse-card{padding:36px;min-height:350px}.message-wrap{gap:36px}.event{grid-template-columns:88px 1fr;gap:18px}.event span:last-child{display:none}.crossover-panel{padding:30px;gap:34px}.programs-grid{grid-template-columns:1fr}.program-detail{padding:32px 28px}.cta-box{padding:42px 28px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
     }
     @media(max-width:480px){
       h1{font-size:50px}.hero-copy{padding:42px 22px}.hero-card{min-height:650px}.hero-tag{padding:15px 16px;gap:14px}.hero-tag svg{width:24px}.actions{flex-direction:column;align-items:stretch}.btn{width:100%}.service{grid-template-columns:92px 1fr}.photo-grid{grid-template-columns:1fr}.photo-card:nth-child(n){grid-column:1}.photo-card figcaption{font-size:20px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.event{grid-template-columns:74px 1fr}.event-date{font-size:23px}
@@ -208,7 +231,7 @@
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
       <nav id="site-nav" aria-label="Main navigation">
-        <a href="#theme">2026 Theme</a><a href="#welcome">New Here</a><a href="#ministries">Ministries</a><a href="#photo-gallery">Photo Gallery</a><a href="#giving">Giving</a><a href="#visit" class="visit-link">Plan a Visit</a>
+        <a href="#theme">2026 Theme</a><a href="#welcome">New Here</a><a href="#ministries">Ministries</a><a href="#photo-gallery">Photo Gallery</a><a href="#programs">Our Programs</a><a href="#giving">Giving</a><a href="#visit" class="visit-link">Plan a Visit</a>
       </nav>
     </div>
   </header>
@@ -291,6 +314,7 @@
           <div class="eyebrow">This Sunday · 10:00 AM–12:00 PM</div>
           <h2>Worship with us.</h2>
           <p>Come experience a joyful time of worship, prayer, and the Word at The Potter’s Place Global Maryland.</p>
+          <figure class="pastor-portrait"><img src="lead-pastor.jpg" alt="Rev Akintunde-Emmanuel, Lead Pastor of The Potter’s Place Global, at the pulpit in a blue outfit with a pink scarf, holding a microphone" /><figcaption>Rev Akintunde-Emmanuel · Lead Pastor</figcaption></figure>
           <div class="host-note"><strong>Rev &amp; Pst. Mrs Akintunde-Emmanuel</strong><span>Lead Pastors · The Potter’s Place Global</span></div>
           <a class="btn btn-dark" href="#visit">Plan your visit</a>
         </div>
@@ -349,6 +373,16 @@
           <figure class="photo-card"><img src="gallery-rev-brown-traditional.jpg" alt="Rev Akintunde-Emmanuel wearing a brown traditional outfit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
           <figure class="photo-card"><img src="gallery-rev-patterned-shirt.jpg" alt="Rev Akintunde-Emmanuel wearing a colorful patterned shirt" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
           <figure class="photo-card"><img src="gallery-church-family-rev.jpg" alt="Church family gathered with Rev Akintunde-Emmanuel" /><figcaption>Church family.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-4th-anniversary.jpg" alt="The Potter’s Place Global 4th Anniversary flyer with the theme Advancement and Enlargement, Isaiah 54:2-3" /><figcaption>4th Anniversary flyer — Advancement &amp; Enlargement, Isaiah 54:2-3.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-welcome-june.jpg" alt="Welcome to June flyer, The Wonders of His Love, featuring the Lead Pastors" /><figcaption>Welcome to June — The Wonders of His Love, with the Lead Pastors.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-1.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-2.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos, second design" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-7th-anniversary-dinner.jpg" alt="7th Year Anniversary Dinner flyer with the theme A People Helped by God" /><figcaption>7th Year Anniversary Dinner — A People Helped by God.</figcaption></figure>
+          <figure class="photo-card"><img src="gallery-rev-ministering-pulpit.jpg" alt="Rev Akintunde-Emmanuel ministering at the pulpit" /><figcaption>Rev Akintunde-Emmanuel ministering at the pulpit.</figcaption></figure>
+          <figure class="photo-card"><img src="gallery-cake-cutting.jpg" alt="Cake cutting celebration with Rev Akintunde-Emmanuel" /><figcaption>Cake cutting celebration with Rev Akintunde-Emmanuel.</figcaption></figure>
+          <figure class="photo-card"><img src="gallery-member-african-print.jpg" alt="A church member seated in the sanctuary in a colourful African print dress" /><figcaption>A church member in a colourful African print dress.</figcaption></figure>
+          <figure class="photo-card"><img src="gallery-women-white-green.jpg" alt="Group photo of women in white and green with Rev Akintunde-Emmanuel" /><figcaption>Women in white and green with Rev Akintunde-Emmanuel.</figcaption></figure>
+          <figure class="photo-card photo-card--poster"><img src="gallery-commanding-month-august.jpg" alt="Commanding Your Month Prayer Meeting circular graphic, August Crossover, on Telegram" /><figcaption>Commanding Your Month — August Crossover Prayer Meeting, on Telegram.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -415,6 +449,48 @@
       </div>
     </section>
 
+    <section class="programs" id="programs" aria-labelledby="programs-title">
+      <div class="wrap">
+        <div class="section-head"><h2 id="programs-title">Our Programs.</h2><p>One family, a rhythm of worship and prayer all week long. Join us in person in Lanham on Sundays, and connect with us on the Telegram platform through the week and at every month’s crossover.</p></div>
+        <div class="programs-grid">
+          <article class="program-detail program-detail--sunday">
+            <span class="program-when">Every Sunday</span>
+            <h3>Sunday Worship Service</h3>
+            <span class="program-time">10:00 AM – 12:00 PM</span>
+            <p>Our weekly worship gathering: joyful praise, prayer, the Word, and fellowship. Come expecting, and leave nourished in spirit and body.</p>
+            <span class="program-place">In person · 5900 Princess Garden Parkway, 7th Floor, Lanham, MD</span>
+          </article>
+          <figure class="program-flyer-card">
+            <img src="program-monday-prayer.jpg" alt="Monday Night Prayer Meeting flyer: a time of warfare, deliverance, and vengeance, 10 PM to 10:30 PM on the Telegram platform" />
+            <figcaption>
+              <span class="program-when">Every Monday</span>
+              <strong>Monday Night Prayer Meeting</strong>
+              <span class="program-desc">“A time of warfare, deliverance, &amp; vengeance.” Start the week in focused, prophetic prayer.</span>
+              <span class="program-card-time">10:00 PM – 10:30 PM</span>
+              <span class="program-place">Telegram Platform</span>
+            </figcaption>
+          </figure>
+          <figure class="program-flyer-card">
+            <img src="program-wednesday-recharge.jpg" alt="Midweek Spiritual Re-Charge Service flyer: every Wednesday at 7:00 PM on the Telegram platform" />
+            <figcaption>
+              <span class="program-when">Every Wednesday</span>
+              <strong>Midweek Spiritual Re-Charge Service</strong>
+              <span class="program-desc">Pause in the middle of the week to pray, recharge, and be renewed in the Word.</span>
+              <span class="program-card-time">7:00 PM – 8:00 PM</span>
+              <span class="program-place">Telegram Platform</span>
+            </figcaption>
+          </figure>
+          <article class="program-detail program-detail--crossover">
+            <span class="program-when">Last day of every month</span>
+            <h3>Monthly Crossover “Commanding Your Month” Prayer Meeting</h3>
+            <span class="program-time">11:45 PM – 12:15 AM</span>
+            <p>Cross into the new month in prayer, commanding your month and declaring God’s word over the days ahead.</p>
+            <span class="program-place">Telegram Platform</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="giving" id="giving" aria-labelledby="giving-title">
       <div class="wrap giving-grid">
         <div class="giving-copy">
@@ -440,7 +516,7 @@
       <div class="footer-grid">
         <div><h3>The Potter’s Place Global Maryland</h3><p>5900 Princess Garden Parkway, 7th Floor<br>Lanham, MD 20724</p></div>
         <div><h3>Gatherings</h3><p>Sundays · 10:00 AM–12:00 PM</p><p>Mondays · 10:00 PM</p><p>Wednesdays · 7:00 PM–8:00 PM</p><p>Last day monthly · 11:45 PM–12:10 AM · Telegram</p></div>
-        <div><h3>Explore</h3><a href="#welcome">New Here</a><a href="#ministries">Ministries</a><a href="#events">Events</a></div>
+        <div><h3>Explore</h3><a href="#welcome">New Here</a><a href="#ministries">Ministries</a><a href="#programs">Our Programs</a><a href="#events">Events</a></div>
       </div>
       <div class="footer-note">The Potter’s Place Global Maryland · Rev &amp; Pst. Mrs Akintunde-Emmanuel, Lead Pastors</div>
     </div>
