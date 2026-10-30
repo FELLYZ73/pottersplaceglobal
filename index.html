@@ -157,8 +157,14 @@
     .photo-card{margin:0;background:var(--surface-strong);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;box-shadow:0 12px 30px rgba(45,36,25,.08)}
     .photo-card{grid-column:span 4}.photo-card:nth-child(1){grid-column:span 7}.photo-card:nth-child(2){grid-column:span 5}
     .photo-card img{width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--surface)}
-    .photo-card:nth-child(2) img,.photo-card:nth-child(7) img,.photo-card:nth-child(14) img,.photo-card:nth-child(15) img{aspect-ratio:1;object-fit:contain;background:#000}
-    .photo-card--poster img{object-fit:contain;background:#000}
+    .photo-card--poster img{aspect-ratio:1;object-fit:contain;background:#000}
+    .segment-nav{display:flex;flex-wrap:wrap;gap:10px;margin:-14px 0 6px}
+    .segment-nav a{padding:9px 15px;border:1px solid var(--line);border-radius:999px;background:var(--surface-strong);font-size:13px;font-weight:700;color:var(--teal);text-decoration:none}
+    .segment-nav a:hover,.segment-nav a:focus-visible{border-color:var(--teal)}
+    .gallery-segment{margin-top:58px;scroll-margin-top:96px}
+    .gallery-segment-head{border-top:1px solid var(--line);padding-top:34px;margin-bottom:28px;display:grid;grid-template-columns:.7fr 1.3fr;gap:60px;align-items:end}
+    .gallery-segment-head h3{font-size:clamp(30px,3.6vw,44px);letter-spacing:-.03em}
+    .gallery-segment-head p{margin:0;color:var(--ink-soft);font-size:15px;max-width:560px}
     .photo-card figcaption{padding:18px 20px;font-family:"Libre Caslon Display",serif;font-size:22px;line-height:1.25}
     .declaration{padding-bottom:46px}
     .declaration-grid{display:grid;grid-template-columns:minmax(280px,.82fr) minmax(0,1fr);gap:64px;align-items:center}
@@ -213,6 +219,7 @@
       .menu-btn{display:block}
       nav{position:absolute;left:14px;right:14px;top:78px;background:var(--surface-strong);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:var(--radius-md);padding:16px;flex-direction:column;align-items:stretch;gap:4px;display:none}
       nav.open{display:flex}nav a{padding:12px 14px}.visit-link{text-align:center;margin-top:6px}
+      .gallery-segment{margin-top:44px}.gallery-segment-head{grid-template-columns:1fr;gap:10px;padding-top:26px;margin-bottom:22px}
       .hero{padding-top:18px}.hero-card{min-height:680px}.hero-card:after{background:linear-gradient(180deg,rgba(7,42,39,.82),rgba(7,42,39,.68) 65%,rgba(7,42,39,.34))}.hero-copy{width:100%;padding:50px 28px}.hero-copy>p{font-size:16px}.hero-tag{left:18px;right:18px;bottom:18px;max-width:none}
       section{padding:66px 0}.theme-year{padding:28px 0 66px}.theme-panel{grid-template-columns:1fr;gap:34px;padding:38px 28px}.theme-seal{width:min(100%,420px);margin-inline:auto}.section-head{grid-template-columns:1fr;gap:18px;margin-bottom:34px}.welcome-grid,.visit-grid,.sunday-grid,.gallery-grid,.declaration-grid,.message-wrap,.crossover-panel,.giving-grid,.cta-box{grid-template-columns:1fr}.visit-grid,.sunday-grid,.declaration-grid,.giving-grid{gap:34px}.gallery-grid{gap:20px}.photo-grid{grid-template-columns:1fr 1fr;gap:18px}.photo-card:nth-child(n){grid-column:span 1}.photo-card:nth-child(1){grid-column:1/-1}.welcome-main,.service-card{padding:30px}.ministry-grid{grid-template-columns:1fr}.ministry{min-height:0;padding:32px 10px}.ministry+.ministry{border-left:0;border-top:1px solid var(--line)}.ministry h3{margin-top:22px}.declaration-art,.crossover-panel figure{width:min(100%,520px);margin-inline:auto}.verse-card{padding:36px;min-height:350px}.message-wrap{gap:36px}.event{grid-template-columns:88px 1fr;gap:18px}.event span:last-child{display:none}.crossover-panel{padding:30px;gap:34px}.programs-grid{grid-template-columns:1fr}.program-detail{padding:32px 28px}.cta-box{padding:42px 28px}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}
     }
@@ -340,49 +347,103 @@
 
     <section class="photo-gallery" id="photo-gallery" aria-labelledby="photo-gallery-title">
       <div class="wrap">
-        <div class="section-head"><h2 id="photo-gallery-title">Photo Gallery.</h2><p>Faces, fellowship, and prayer from the life of The Potter’s Place Global.</p></div>
-        <div class="photo-grid">
-          <figure class="photo-card"><img src="gallery-cherished-memory.jpg" alt="Rev Akintunde-Emmanuel in a pink suit standing outdoors with a guest" /><figcaption>On this day — a cherished memory.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-prayer-force.jpg" alt="Potter’s Place Prayer Force seal" /><figcaption>Potter’s Place Prayer Force.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-pst-mrs-akintunde-emmanuel.jpg" alt="Pst. Mrs Akintunde-Emmanuel standing before an orange floral backdrop" /><figcaption>Pst. Mrs Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-lead-pastors.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel together" /><figcaption>Our Lead Pastors.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-akintunde-emmanuel.jpg" alt="Rev Akintunde-Emmanuel" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-blue-suit.jpg" alt="Professional portrait of Rev Akintunde-Emmanuel in a blue suit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-happy-new-month.jpg" alt="Happy New Month blessing flyer featuring Rev Akintunde-Emmanuel" /><figcaption>Happy New Month — monthly blessing flyer.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-august-declarations.jpg" alt="Welcome to the Month of August prophetic declarations flyer" /><figcaption>August prophetic declarations flyer.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-portrait.jpg" alt="Portrait of Rev Akintunde-Emmanuel in a blue suit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-moment-in-time.jpg" alt="Rev Akintunde-Emmanuel in a Moment In Time photograph from January 21, 2026" /><figcaption>A Moment In Time.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-outdoors.jpg" alt="Rev Akintunde-Emmanuel outdoors in a white shirt" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-ministry-family-1.jpg" alt="A member of the ministry family" /><figcaption>Ministry family.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-ministry-family-2.jpg" alt="A member of the ministry family" /><figcaption>Ministry family.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-america-pray.jpg" alt="America Pray graphic with an eagle and praying hands" /><figcaption>America Pray — praying for the land of our prosperity.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-gods-faithfulness.jpg" alt="Reflecting on God’s Faithfulness devotional flyer" /><figcaption>Reflecting on God’s Faithfulness.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-church-fellowship.jpg" alt="Rev Akintunde-Emmanuel in a white traditional outfit at a church gathering" /><figcaption>Church fellowship gathering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-ministering-1.jpg" alt="Rev Akintunde-Emmanuel speaking into a microphone at a church gathering" /><figcaption>Ministering at a church gathering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-dinner-speaker.jpg" alt="A speaker addressing the congregation at a church dinner gathering" /><figcaption>Church dinner gathering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-ministering-2.jpg" alt="Rev Akintunde-Emmanuel speaking into a microphone with a child nearby" /><figcaption>Ministering at a church gathering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-fellowship-meal-table.jpg" alt="Rev Akintunde-Emmanuel seated at a table with members during a church dinner" /><figcaption>Fellowship over a meal.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-church-family-gathering.jpg" alt="Members seated together at a church gathering" /><figcaption>Church family gathering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-fellowship-meal.jpg" alt="Women of the church enjoying a fellowship meal" /><figcaption>Fellowship meal.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-lead-pastors-together.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel standing together with their arms around each other" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-ministry-family-pink-hat.jpg" alt="A member of the ministry family wearing a pink knit hat" /><figcaption>Ministry family.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-church-celebration.jpg" alt="A member of the ministry family in a colorful dress at church" /><figcaption>Church celebration.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-mummy-peju-70.jpg" alt="Tribute flyer congratulating Mummy Peju Sorinmade on her 70th birthday" /><figcaption>Celebrating Mummy Peju Sorinmade at 70.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-mummy-peju-portrait.jpg" alt="Portrait of Mummy Peju Sorinmade" /><figcaption>Mummy Peju Sorinmade.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-ministering-podium.jpg" alt="Rev Akintunde-Emmanuel preaching at the podium with a microphone" /><figcaption>Rev Akintunde-Emmanuel ministering.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-brown-traditional.jpg" alt="Rev Akintunde-Emmanuel wearing a brown traditional outfit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-patterned-shirt.jpg" alt="Rev Akintunde-Emmanuel wearing a colorful patterned shirt" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-church-family-rev.jpg" alt="Church family gathered with Rev Akintunde-Emmanuel" /><figcaption>Church family.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-4th-anniversary.jpg" alt="The Potter’s Place Global 4th Anniversary flyer with the theme Advancement and Enlargement, Isaiah 54:2-3" /><figcaption>4th Anniversary flyer — Advancement &amp; Enlargement, Isaiah 54:2-3.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-welcome-june.jpg" alt="Welcome to June flyer, The Wonders of His Love, featuring the Lead Pastors" /><figcaption>Welcome to June — The Wonders of His Love, with the Lead Pastors.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-1.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-2.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos, second design" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-7th-anniversary-dinner.jpg" alt="7th Year Anniversary Dinner flyer with the theme A People Helped by God" /><figcaption>7th Year Anniversary Dinner — A People Helped by God.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-rev-ministering-pulpit.jpg" alt="Rev Akintunde-Emmanuel ministering at the pulpit" /><figcaption>Rev Akintunde-Emmanuel ministering at the pulpit.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-cake-cutting.jpg" alt="Cake cutting celebration with Rev Akintunde-Emmanuel" /><figcaption>Cake cutting celebration with Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-member-african-print.jpg" alt="A church member seated in the sanctuary in a colourful African print dress" /><figcaption>A church member in a colourful African print dress.</figcaption></figure>
-          <figure class="photo-card"><img src="gallery-women-white-green.jpg" alt="Group photo of women in white and green with Rev Akintunde-Emmanuel" /><figcaption>Women in white and green with Rev Akintunde-Emmanuel.</figcaption></figure>
-          <figure class="photo-card photo-card--poster"><img src="gallery-commanding-month-august.jpg" alt="Commanding Your Month Prayer Meeting circular graphic, August Crossover, on Telegram" /><figcaption>Commanding Your Month — August Crossover Prayer Meeting, on Telegram.</figcaption></figure>
+        <div class="section-head"><h2 id="photo-gallery-title">Photo Gallery.</h2><p>Faces, fellowship, and prayer from the life of The Potter’s Place Global, gathered into segments. Jump to a segment or simply scroll through them all.</p></div>
+        <div class="segment-nav" role="navigation" aria-label="Photo Gallery segments">
+          <a href="#gallery-lead-pastors">Lead Pastors</a>
+          <a href="#gallery-worship">Worship &amp; Our Sanctuary</a>
+          <a href="#gallery-celebrations">Celebrations &amp; Events</a>
+          <a href="#gallery-flyers">Flyers &amp; Programs</a>
+          <a href="#gallery-outreach">Outreach &amp; Missions</a>
+        </div>
+
+        <div class="gallery-segment" id="gallery-lead-pastors">
+          <div class="gallery-segment-head"><h3>Lead Pastors</h3><p>Rev &amp; Pst. Mrs Akintunde-Emmanuel, hosts of The Potter’s Place Global, together and in portrait.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card"><img src="gallery-lead-pastors-traditional-1.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel standing together in traditional attire, she in a lace dress and striped headwrap, he in white with a matching cap" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel in traditional attire.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-lead-pastors-traditional-2.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel standing together in traditional attire, a second shot" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel in traditional attire.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-lead-pastors.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel together" /><figcaption>Our Lead Pastors.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-lead-pastors-together.jpg" alt="Rev and Pst. Mrs Akintunde-Emmanuel standing together with their arms around each other" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-lead-pastors-selfie-1.jpg" alt="Close-up selfie of Rev and Pst. Mrs Akintunde-Emmanuel in matching traditional attire" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel, up close.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-lead-pastors-selfie-2.jpg" alt="Close-up selfie of Rev and Pst. Mrs Akintunde-Emmanuel in matching traditional attire, a second shot" /><figcaption>Rev &amp; Pst. Mrs Akintunde-Emmanuel, up close.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-traditional-lace-orange-backdrop.jpg" alt="A woman in traditional lace attire and a striped headwrap standing before an orange draped backdrop with flowers" /><figcaption>In traditional lace attire before an orange draped backdrop.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-pst-mrs-akintunde-emmanuel.jpg" alt="Pst. Mrs Akintunde-Emmanuel standing before an orange floral backdrop" /><figcaption>Pst. Mrs Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-akintunde-emmanuel.jpg" alt="Rev Akintunde-Emmanuel" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-blue-suit.jpg" alt="Professional portrait of Rev Akintunde-Emmanuel in a blue suit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-portrait.jpg" alt="Portrait of Rev Akintunde-Emmanuel in a blue suit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-outdoors.jpg" alt="Rev Akintunde-Emmanuel outdoors in a white shirt" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-brown-traditional.jpg" alt="Rev Akintunde-Emmanuel wearing a brown traditional outfit" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-patterned-shirt.jpg" alt="Rev Akintunde-Emmanuel wearing a colorful patterned shirt" /><figcaption>Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-cherished-memory.jpg" alt="Rev Akintunde-Emmanuel in a pink suit standing outdoors with a guest" /><figcaption>On this day — a cherished memory.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-moment-in-time.jpg" alt="Rev Akintunde-Emmanuel in a Moment In Time photograph from January 21, 2026" /><figcaption>A Moment In Time.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="gallery-segment" id="gallery-worship">
+          <div class="gallery-segment-head"><h3>Worship &amp; Our Sanctuary</h3><p>Ministering, gathering, and the sanctuary in Lanham where we meet each week.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card"><img src="gallery-sanctuary-chairs-2.jpg" alt="Wide view of the sanctuary interior with rows of burgundy chairs and patterned carpet" /><figcaption>Our sanctuary, ready for worship.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-sanctuary-chairs-1.jpg" alt="Sanctuary interior with rows of burgundy chairs, a stone pillar, and plants" /><figcaption>Inside the sanctuary.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-ministering-podium.jpg" alt="Rev Akintunde-Emmanuel preaching at the podium with a microphone" /><figcaption>Rev Akintunde-Emmanuel ministering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-rev-ministering-pulpit.jpg" alt="Rev Akintunde-Emmanuel ministering at the pulpit" /><figcaption>Rev Akintunde-Emmanuel ministering at the pulpit.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-ministering-1.jpg" alt="Rev Akintunde-Emmanuel speaking into a microphone at a church gathering" /><figcaption>Ministering at a church gathering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-ministering-2.jpg" alt="Rev Akintunde-Emmanuel speaking into a microphone with a child nearby" /><figcaption>Ministering at a church gathering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-church-fellowship.jpg" alt="Rev Akintunde-Emmanuel in a white traditional outfit at a church gathering" /><figcaption>Church fellowship gathering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-church-family-gathering.jpg" alt="Members seated together at a church gathering" /><figcaption>Church family gathering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-church-family-rev.jpg" alt="Church family gathered with Rev Akintunde-Emmanuel" /><figcaption>Church family.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-member-african-print.jpg" alt="A church member seated in the sanctuary in a colourful African print dress" /><figcaption>A church member in a colourful African print dress.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="gallery-segment" id="gallery-celebrations">
+          <div class="gallery-segment-head"><h3>Celebrations &amp; Events</h3><p>Dinners, fellowship meals, and joyful moments shared by the church family.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card"><img src="gallery-rev-seated-hall.jpg" alt="Rev Akintunde-Emmanuel seated in a hall among guests in traditional attire" /><figcaption>Rev Akintunde-Emmanuel seated among guests in traditional attire.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-cake-cutting.jpg" alt="Cake cutting celebration with Rev Akintunde-Emmanuel" /><figcaption>Cake cutting celebration with Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-dinner-speaker.jpg" alt="A speaker addressing the congregation at a church dinner gathering" /><figcaption>Church dinner gathering.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-fellowship-meal-table.jpg" alt="Rev Akintunde-Emmanuel seated at a table with members during a church dinner" /><figcaption>Fellowship over a meal.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-fellowship-meal.jpg" alt="Women of the church enjoying a fellowship meal" /><figcaption>Fellowship meal.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-women-white-green.jpg" alt="Group photo of women in white and green with Rev Akintunde-Emmanuel" /><figcaption>Women in white and green with Rev Akintunde-Emmanuel.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-church-celebration.jpg" alt="A member of the ministry family in a colorful dress at church" /><figcaption>Church celebration.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-ministry-family-1.jpg" alt="A member of the ministry family" /><figcaption>Ministry family.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-ministry-family-2.jpg" alt="A member of the ministry family" /><figcaption>Ministry family.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-ministry-family-pink-hat.jpg" alt="A member of the ministry family wearing a pink knit hat" /><figcaption>Ministry family.</figcaption></figure>
+            <figure class="photo-card"><img src="gallery-mummy-peju-portrait.jpg" alt="Portrait of Mummy Peju Sorinmade" /><figcaption>Mummy Peju Sorinmade.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="gallery-segment" id="gallery-flyers">
+          <div class="gallery-segment-head"><h3>Flyers &amp; Programs</h3><p>Prayer graphics, monthly declarations, and flyers from our services and celebrations.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card photo-card--poster"><img src="gallery-lets-pray-wednesday.jpg" alt="Circular graphic reading Let’s Pray for the Potter’s Place Global this Wednesday, with a gold cross, white doves, and people kneeling in prayer" /><figcaption>“Let’s Pray for The Potter’s Place Global this Wednesday” — prayer graphic.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-prayer-force.jpg" alt="Potter’s Place Prayer Force seal" /><figcaption>Potter’s Place Prayer Force.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-happy-new-month.jpg" alt="Happy New Month blessing flyer featuring Rev Akintunde-Emmanuel" /><figcaption>Happy New Month — monthly blessing flyer.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-august-declarations.jpg" alt="Welcome to the Month of August prophetic declarations flyer" /><figcaption>August prophetic declarations flyer.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-commanding-month-august.jpg" alt="Commanding Your Month Prayer Meeting circular graphic, August Crossover, on Telegram" /><figcaption>Commanding Your Month — August Crossover Prayer Meeting, on Telegram.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-america-pray.jpg" alt="America Pray graphic with an eagle and praying hands" /><figcaption>America Pray — praying for the land of our prosperity.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-gods-faithfulness.jpg" alt="Reflecting on God’s Faithfulness devotional flyer" /><figcaption>Reflecting on God’s Faithfulness.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-welcome-june.jpg" alt="Welcome to June flyer, The Wonders of His Love, featuring the Lead Pastors" /><figcaption>Welcome to June — The Wonders of His Love, with the Lead Pastors.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-4th-anniversary.jpg" alt="The Potter’s Place Global 4th Anniversary flyer with the theme Advancement and Enlargement, Isaiah 54:2-3" /><figcaption>4th Anniversary flyer — Advancement &amp; Enlargement, Isaiah 54:2-3.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-7th-anniversary-dinner.jpg" alt="7th Year Anniversary Dinner flyer with the theme A People Helped by God" /><figcaption>7th Year Anniversary Dinner — A People Helped by God.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-mummy-peju-70.jpg" alt="Tribute flyer congratulating Mummy Peju Sorinmade on her 70th birthday" /><figcaption>Celebrating Mummy Peju Sorinmade at 70.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-prophetic-prayer-september.jpg" alt="Prophetic Prayer graphic for September with a pregnant woman in white, declaring bring forth every good thing God has deposited, Isaiah 66:9 (KJV)" /><figcaption>Prophetic Prayer for September — “Bring forth every good thing,” Isaiah 66:9 (KJV).</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-welcome-september.jpg" alt="Circular Welcome to September graphic over a sunrise path, spelling out September as a season of settlement, evidence, promises, testimonies, miracles, and restoration, Isaiah 55:10-11" /><figcaption>Welcome to September — “My September will not be barren,” Isaiah 55:10-11.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-prayer-points-end-august.jpg" alt="Prayer Points to End the Month of August graphic with two numbered prayer points against affliction, bitterness, pain, and tears carrying into September" /><figcaption>Prayer Points to End the Month of August — “My September will not be barren!”</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-sunday-timothee-bannerman.jpg" alt="Sunday flyer announcing Prophet Timothee Bannerman from London, UK as special guest, pictured holding a microphone, 10 AM to 12 noon" /><figcaption>Sunday flyer — Prophet Timothee Bannerman from London, UK, our special guest.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-fanning-flame-6pm.jpg" alt="Fanning the Flame of Fire scroll graphic announcing the next session is at 6 PM to 6:15 PM, connect using the Telegram platform" /><figcaption>Fanning the Flame of Fire — next session 6 PM to 6:15 PM, on Telegram.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-fanning-flame-12noon.jpg" alt="Fanning the Flame of Fire scroll graphic announcing the next session is at 12 noon to 12:15 PM, connect using the Telegram platform" /><figcaption>Fanning the Flame of Fire — next session 12 noon to 12:15 PM, on Telegram.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-lukewarm-scroll.jpg" alt="Scroll graphic reading If You Are Lukewarm I Will Spew You Out, with the text of Revelation 3:15-16 (KJV) and the words God is not looking for lukewarm Christianity, He wants fire" /><figcaption>“If You Are Lukewarm I Will Spew You Out” — Revelation 3:15-16 (KJV).</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-fanning-flame-friday-schedule.jpg" alt="Fanning the Flame of Fire Prayer Chain schedule for tomorrow Friday, listing eight 15-minute watches from 6 AM to 3:15 AM beside a lit lantern" /><figcaption>Fanning the Flame of Fire Prayer Chain — Friday schedule of eight 15-minute watches.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-fanning-flame-prayer-points.jpg" alt="Fanning the Flame of Fire scroll graphic listing five prayer points, beginning Oh Lord set my heart on fire for You" /><figcaption>Fanning the Flame of Fire — five prayer points on the scroll.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-fanning-flame-watch-hour.jpg" alt="Fanning the Flame of Fire Prayer Chain graphic for tomorrow Friday asking members to please indicate your prayer watch hour, beside a lit lantern" /><figcaption>Fanning the Flame of Fire Prayer Chain — Tomorrow Friday, indicate your prayer watch hour.</figcaption></figure>
+          </div>
+        </div>
+
+        <div class="gallery-segment" id="gallery-outreach">
+          <div class="gallery-segment-head"><h3>Outreach &amp; Missions</h3><p>Reaching beyond our walls, in partnership and in service.</p></div>
+          <div class="photo-grid">
+            <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-1.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
+            <figure class="photo-card photo-card--poster"><img src="gallery-vineyard-hope-2.jpg" alt="Outreach flyer with Vineyard Hope Foundation, Impacting Special Need Individuals, Lagos, second design" /><figcaption>Outreach with Vineyard Hope Foundation — Impacting Special Need Individuals, Lagos.</figcaption></figure>
+          </div>
         </div>
       </div>
     </section>
